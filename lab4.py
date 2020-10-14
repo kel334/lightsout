@@ -19,8 +19,15 @@ def main():
 	print(f"You won with {moves} moves!")
 
 def board():
-	
-
+	board = [
+		[X, X, X, X, X],
+		[X, X, X, X, X],
+		[X, X, X, X, X],
+		[X, X, X, X, X],
+		[X, X, X, X, X]
+	]	
+#replace X's with something else??
+#not random here?? creates unplayable games
 
 def ask_row_and_col():
 	row = input("Please choose a row coordinate (0-4): ")
