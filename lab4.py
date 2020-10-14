@@ -25,17 +25,55 @@ def main():
         show(board)
         (row, col) = ask_row_and_col()
         touch(board, row, col)
-        moved += 1
+        moves += 1
     show(board)
     print(f"You won with {moves} moves!")
-#def board():
 
 
 #def ask_row_and_col():
 
 
-#def touch(board, row, col):
 
+#def touch(board, row, col):
+	if board[row][col] == white_square:
+		board[row][col] = black_square
+		if board[row][col+1] == white_square:
+			board[row][col+1] = black_square
+		elif board[row][col+1] == black_square:
+			board[row][col+1] = white_square
+		if board[row][col-1] == white_square:
+			board[row][col-1] = black_square
+		elif board[row][col-1] == black_square:
+			board[row][col-1] = white_square
+		if board[row+1][col] == white_square:
+			board[row+1][col] = black_square
+		elif board[row+1][col] == black_square:
+			board[row+1][col] = white_square
+		if board[row-1][col] == white_square:
+			board[row-1][col] = black_square
+		elif board[row-1][col] == black_square
+			board[row-1][col] = white_square
+
+	elif board[row][col] == black_square:
+		board[row][col] = white_square
+		if board[row][col+1] == white_square:
+			board[row][col+1] = black_square
+		elif board[row][col+1] == black_square:
+			board[row][col+1] = white_square
+		if board[row][col-1] == white_square:
+			board[row][col-1] = black_square
+		elif board[row][col-1] == black_square:
+			board[row][col-1] = white_square
+		if board[row+1][col] == white_square:
+			board[row+1][col] = black_square
+		elif board[row+1][col] == black_square:
+			board[row+1][col] = white_square
+		if board[row-1][col] == white_square:
+			board[row-1][col] = black_square
+		elif board[row-1][col] == black_square
+			board[row-1][col] = white_square
+
+	
 
 
 #def is_solved():
