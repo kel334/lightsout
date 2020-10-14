@@ -25,7 +25,10 @@ def board():
 		[X, X, X, X, X],
 		[X, X, X, X, X],
 		[X, X, X, X, X]
-	]	
+	]
+	
+	wSq = \N{WHITE SQUARE}
+	bSq = \N{BLACK SQUARE}	
 #replace X's with something else??
 #not random here?? creates unplayable games
 
