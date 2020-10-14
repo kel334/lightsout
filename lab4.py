@@ -4,10 +4,6 @@
 
 import random
 
-def ask_row_col():
-	row =
-	col =
-
 
 def main():
 	board = []
@@ -21,3 +17,15 @@ def main():
 		moved += 1
 	show(board)
 	print(f"You won with {moves} moves!")
+
+def board():
+
+
+def ask_row_and_col():
+
+
+def touch(board, row, col):
+
+
+def is_solved():
+
