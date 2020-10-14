@@ -19,9 +19,12 @@ def main():
 	print(f"You won with {moves} moves!")
 
 def board():
+	
 
 
 def ask_row_and_col():
+	row = input("Please choose a row coordinate (0-4): ")
+	col = input("Please choose a column coordinate (0-4): ")
 
 
 def touch(board, row, col):
