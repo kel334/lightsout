@@ -1,51 +1,44 @@
-#Kendra Ludwig (kel334@nau.edu)
-#Michael Reed (msr248@nau.edu)
+ #Kendra Ludwig (kel334@nau.edu)
+ #Michael Reed (msr248@nau.edu)
 
 
 import random
 
 
 def main():
-	board = []
+    white_square = "\N{WHITE SQUARE}"
+    black_square = "\N{BLACK SQUARE}"
+    squares = [white_square, black_square]
 
-	randomize(board)
-	moves = 0
-	while not is_solved(board):
-		show(board)
-		(row, col) = ask_row_and_col()
-		touch(board, row, col)
-		moved += 1
-	show(board)
-	print(f"You won with {moves} moves!")
+    board = [[random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares)],
+            [random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares)],
+            [random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares)],
+            [random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares)],
+            [random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares)]]
 
-def board():
-	board = [
-		[X, X, X, X, X],
-		[X, X, X, X, X],
-		[X, X, X, X, X],
-		[X, X, X, X, X],
-		[X, X, X, X, X]
-	]
-	
-	wSq = \N{WHITE SQUARE}
-	bSq = \N{BLACK SQUARE}	
-#replace X's with something else??
-#not random here?? creates unplayable games
+    for row in board:
+        board = row[0], row[1], row[2], row[3], row[4]
+        print(row[0], row[1], row[2], row[3], row[4])
 
-def ask_row_and_col():
-	row = input("Please choose a row coordinate (0-4): ")
-	col = input("Please choose a column coordinate (0-4): ")
-	if row >= 5:
-		print("Invalid input")
-	else:
-	
-	if col >= 5:
-		print("Invalid input")
-	else:
+    moves = 0
+    while not is_solved(board):
+        show(board)
+        (row, col) = ask_row_and_col()
+        touch(board, row, col)
+        moved += 1
+    show(board)
+    print(f"You won with {moves} moves!")
+#def board():
 
 
-def touch(board, row, col):
+#def ask_row_and_col():
 
 
-def is_solved():
-	if 
+#def touch(board, row, col):
+
+
+
+#def is_solved():
+
+
+main()
