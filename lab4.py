@@ -32,10 +32,17 @@ def board():
 def ask_row_and_col():
 	row = input("Please choose a row coordinate (0-4): ")
 	col = input("Please choose a column coordinate (0-4): ")
+	if row >= 5:
+		print("Invalid input")
+	else:
+	
+	if col >= 5:
+		print("Invalid input")
+	else:
 
 
 def touch(board, row, col):
 
 
 def is_solved():
-
+	if 
