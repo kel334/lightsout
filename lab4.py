@@ -9,6 +9,7 @@ def main():
     white_square = "\N{WHITE SQUARE}"
     black_square = "\N{BLACK SQUARE}"
     squares = [white_square, black_square]
+    moves = 0
 
     board = [[random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares)],
             [random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares), random.choice(squares)],
@@ -19,9 +20,14 @@ def main():
     for row in board:
         board = row[0], row[1], row[2], row[3], row[4]
         print(row[0], row[1], row[2], row[3], row[4])
+	
+    x = int(input("Please pick a row number between 0 and 4: "))
+    y = int(input("Please pick a column number between 0 and 4: "))
+    row = x
+    col = y
 
     moves = 0
-    while not is_solved(board):
+    while white_square != 0:
         show(board)
         (row, col) = ask_row_and_col()
         touch(board, row, col)
@@ -30,8 +36,16 @@ def main():
     print(f"You won with {moves} moves!")
 
 
-#def ask_row_and_col():
+def ask_row_and_col():
+    x = int(input("Please pick a row number between 0 and 4: "))
+    y = int(input("Please pick a column number between 0 and 4: "))
 
+    if x > 4 or x < 0:
+        x = int(input("Please pick a row number between 0 and 4: "))
+
+
+    if y > 4 or y < 0:
+        y = int(input("Please pick a column number between 0 and 4: "))
 
 #change swap the colors of the touching squares
 #includes: one up, one down, one left, one right
@@ -290,12 +304,7 @@ def touch(board, row, col):
 			if board[row-1][col] == white_square:
 				board[row-1][col] = black_square
 			elif board[row-1][col] == black_square:
-				board[row-1][col] = white_square
-
-
-
-
-#def is_solved():
+				board[row-1][col] = white_squar
 
 
 main()
