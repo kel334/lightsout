@@ -28,11 +28,10 @@ def main():
 
     moves = 0
     while white_square != 0:
-        show(board)
         (row, col) = ask_row_and_col()
         touch(board, row, col)
         moves += 1
-    show(board)
+    print(row[0], row[1], row[2], row[3], row[4])
     print(f"You won with {moves} moves!")
 
 
@@ -50,7 +49,7 @@ def ask_row_and_col():
 #change swap the colors of the touching squares
 #includes: one up, one down, one left, one right
 def touch(board, row, col):
-	for i in range(1, 4)
+	for i in range(1, 4):
 		if board[row][col] == white_square:
 			board[row][col] = black_square
 			if board[row][col+1] == white_square:
@@ -67,7 +66,7 @@ def touch(board, row, col):
 				board[row+1][col] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = black_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 		elif board[row][col] == black_square:
@@ -86,7 +85,7 @@ def touch(board, row, col):
 				board[row+1][col] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = black_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 	#accounts for edges and corners wrapping 
@@ -134,7 +133,7 @@ def touch(board, row, col):
 				board[row][col-1] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = white_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 		elif board[row][col] == black_square:
@@ -149,7 +148,7 @@ def touch(board, row, col):
 				board[row][col-1] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = black_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 	if col == 0:
@@ -165,7 +164,7 @@ def touch(board, row, col):
 				board[row+1][col] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = white_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 		elif board[row][col] == black_square:
@@ -180,7 +179,7 @@ def touch(board, row, col):
 				board[row+1][col] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = black_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 	if col == 4:
@@ -196,7 +195,7 @@ def touch(board, row, col):
 				board[row+1][col] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = white_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 		elif board[row][col] == black_square:
@@ -211,7 +210,7 @@ def touch(board, row, col):
 				board[row+1][col] = white_square
 			if board[row-1][col] == white_square:
 				board[row-1][col] = black_square
-			elif board[row-1][col] == black_square
+			elif board[row-1][col] == black_square:
 				board[row-1][col] = white_square
 
 	if row == 0 and col == 0:
@@ -304,7 +303,7 @@ def touch(board, row, col):
 			if board[row-1][col] == white_square:
 				board[row-1][col] = black_square
 			elif board[row-1][col] == black_square:
-				board[row-1][col] = white_squar
+				board[row-1][col] = white_square
 
 
 main()
